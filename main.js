@@ -5,6 +5,7 @@
  */
 
 import V3Store from "/vee3/vee_store.js";
+import V3Instance from "/vee3/vee_instance.js";
 
 import Tests from "./tests.js";
 
@@ -28,6 +29,7 @@ export default class Main {
         try {
             // Set instanceid in the V3Store
             V3Store.instanceId(config.app.instancedid);
+            V3Instance.instanceId(config.app.instancedid);
             // Create model
             this.model = new Model(this.api);
             // Set the webid to show auth status
